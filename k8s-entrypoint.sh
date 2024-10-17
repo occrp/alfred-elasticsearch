@@ -11,9 +11,9 @@ echo "create keystore"
 shopt -s nullglob
 
 for SECRETFILE in /secrets/*; do
-    KEYNAME=$(basename $SECRETFILE);
-    echo "$KEYNAME from $SECRETFILE";
-    /usr/share/elasticsearch/bin/elasticsearch-keystore add-file $KEYNAME $SECRETFILE;
+    KEYNAME=$(basename "$SECRETFILE")
+    echo "$KEYNAME from $SECRETFILE"
+    /usr/share/elasticsearch/bin/elasticsearch-keystore add-file "$KEYNAME" "$SECRETFILE"
 done
 
 # Call original entrypoint script
