@@ -1,0 +1,17 @@
+cluster.name: 'docker-cluster'
+network.host: '0.0.0.0'
+
+xpack:
+  graph:    {enabled: 'false'}
+  ml:       {enabled: 'false'}
+  security: {enabled: 'false'}
+
+# Never automatically create index. This is a bug. Don't hide it.
+# Mega-confusing.
+action: {auto_create_index: 'false'}
+
+# Deprecated in 8.x because it's slow, but we need it for various things.
+indices: {id_field_data.enabled: 'true'}
+
+# Don't bail out of there's less than 5% disk space free.
+cluster: {routing: {allocation: {disk: {threshold_enabled: 'false'}}}}
