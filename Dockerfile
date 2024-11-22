@@ -1,5 +1,5 @@
-FROM elasticsearch:8.15.2
-LABEL org.opencontainers.image.source="https://github.com/alephdata/aleph-elasticsearch"
+FROM elasticsearch:8.16.0
+LABEL org.opencontainers.image.source="https://github.com/occrp/alfred-elasticsearch"
 
 RUN bin/elasticsearch-plugin install --batch analysis-icu
 
