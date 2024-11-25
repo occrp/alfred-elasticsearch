@@ -1,7 +1,7 @@
 name: 'package'
 on:
   push:
-    branches: ['main']
+    branches: ['*']
 
 permissions:
   packages: 'write'
