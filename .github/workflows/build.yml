@@ -25,7 +25,7 @@ jobs:
           context: '.'
           push:    true
           tags:    'ghcr.io/occrp/alfred-elasticsearch:${{ github.sha }}'
-          platforms: 'darwin/arm64,linux/arm64,linux/amd64'
+          platforms: 'darwin/amd64,linux/arm64,linux/amd64'
 
       - uses: 'docker/build-push-action@v6'
         if: github.ref_name != 'main'
