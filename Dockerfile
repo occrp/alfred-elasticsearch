@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM elasticsearch:8.16.1
+FROM --platform=$BUILDPLATFORM elasticsearch:8.15.5
 LABEL org.opencontainers.image.source="https://github.com/occrp/alfred-elasticsearch"
 
 RUN bin/elasticsearch-plugin install --batch analysis-icu
