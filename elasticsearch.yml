@@ -4,7 +4,7 @@ network.host: '0.0.0.0'
 xpack:
   graph:    {enabled: 'false'}
   ml:       {enabled: 'false'}
-  security: {enabled: 'false'}
+  security: {http: {ssl: {enabled: 'false'}}}
 
 # Never automatically create index. This is a bug. Don't hide it.
 # Mega-confusing.
